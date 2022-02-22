@@ -8,21 +8,21 @@ class Ogre {
 encounter(human) {
   human.encounterCounter++
   if (human.noticesOgre()){
-    this.swings++;
-   }
+     this.swings++;
+     }
 
    if(this.swings === 2){
      human.knockedOut = true;
-   }
-}
+     }
+  }
 
 swingAt(human) {
   this.swings++;
-}
+  }
 
 apologize(human) {
   human.knockedOut = false;
-}
+  }
 
 }
 
