@@ -14,16 +14,16 @@ class SkatePark {
     if(this.occupants.length === 3) {
       return `Sorry, we are at max capacity. Thank you for understanding.`
     }
-    
+
     if(this.isPrivate && skater.money >= this.cost) {
       skater.money -= this.cost;
       this.occupants.push(skater);
       return `Welcome to ${this.name}, the cost will be $${this.cost}.00.`
-      } else if(this.isPrivate && skater.money < this.cost) {
-      return `Sorry, you don't have enough money.`
-      } else {
-      this.occupants.push(skater);
-      return `Welcome to the free ${this.name} Skatepark!`
+        } else if(this.isPrivate && skater.money < this.cost) {
+          return `Sorry, you don't have enough money.`
+        } else {
+          this.occupants.push(skater);
+          return `Welcome to the free ${this.name} Skatepark!`
     }
   }
 }
